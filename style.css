@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #e3e3e3;
+  background-color: #1a1a1a; /* Dark background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background: #121212; /* Darker container background */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); /* Darker shadow */
+  color: #e3e3e3;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Neon gradient */
+  color: white;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Music List Section */
+.music-list-section {
+  background: #1f1f1f; /* Slightly lighter dark background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Ensure proper layout for the section */
+}
+
+.music-list-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff416c;
+}
+
+/* Music List */
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px; /* Constrain height for scrolling */
+  overflow-y: auto; /* Enable scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ff416c #292929; /* Custom scrollbar colors */
+}
+
+.music-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.music-list::-webkit-scrollbar-thumb {
+  background: #ff416c;
+  border-radius: 10px;
+}
+
+.music-list::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #292929; /* Slightly lighter background for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(255, 65, 108, 0.7); /* Neon glow effect */
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.music-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff416c;
+}
+
+.music-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Player Section */
+.player-section {
+  background: #1f1f1f;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.current-track {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.track-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #ff416c;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.track-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e3e3e3;
+}
+
+.track-duration {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 15px;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(255, 65, 108, 0.7); /* Neon glow */
+}
+
+.controls button:active {
+  transform: scale(0.9);
+  box-shadow: 0px 2px 6px rgba(255, 65, 108, 0.5);
+}

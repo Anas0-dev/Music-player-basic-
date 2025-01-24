@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Modern Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Atlasia Music</h1>
+    </header>
+
+    <main>
+      <!-- Music List Section -->
+      <section class="music-list-section">
+        <h2>Your Playlist</h2>
+        <div class="music-list"></div>
+      </section>
+
+      <!-- Music Player Section -->
+      <section class="player-section">
+        <div class="current-track">
+          <img src="" alt="Track Art" class="track-art">
+          <div class="track-info">
+            <h3 class="track-title">Select a Song</h3>
+            <p class="track-duration"></p>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="backward"><i class="ri-skip-back-fill"></i></button>
+          <button id="play"><i id="paused" class="ri-play-fill"></i></button>
+          <button id="forward"><i class="ri-skip-forward-fill"></i></button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
